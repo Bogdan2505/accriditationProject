@@ -9,7 +9,6 @@ import org.hibernate.Hibernate;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Objects;
-
 @Getter
 @Setter
 @ToString
