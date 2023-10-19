@@ -8,11 +8,13 @@
         <version>3.1.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.prod</groupId>
     <artifactId>accriditationProject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>accriditationProject</name>
     <description>accriditationProject</description>
+
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -24,6 +26,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,12 +57,12 @@
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.12.1</version>
-        </dependency>
-
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt</artifactId>-->
+<!--            <version>0.12.1</version>-->
+<!--        </dependency>-->
+<!---->
     </dependencies>
 
     <build>
