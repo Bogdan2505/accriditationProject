@@ -32,6 +32,14 @@
             <column name="ROLE_ID" type="bigserial" remarks="Уникальный идентификатор роли"/>
         </createTable>
 
+        <createTable tableName="COMMENT" remarks="Комментарии (отзовы)">
+            <column name="ID" type="" remarks="Уникальный идентификатор" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="PK_COMMENT_ID"/>
+            </column>
+            <column name="USER_ID" type="bigserial" remarks="Уникальный идентификатор автора"/>
+            <column name="COMMENT" type="varchar(5000)" remarks="Комментраий"/>
+        </createTable>
+
         <addForeignKeyConstraint baseTableName="USER2ROLE"
                                  baseColumnNames="USER_ID"
                                  constraintName="FK_USER_ID"
@@ -43,6 +51,13 @@
                                  baseColumnNames="ROLE_ID"
                                  constraintName="FK_ROLE_ID"
                                  referencedTableName="ROLE"
+                                 referencedColumnNames="ID"
+                                 onDelete="CASCADE"/>
+
+        <addForeignKeyConstraint baseTableName="COMMENT"
+                                 baseColumnNames="USER_ID"
+                                 constraintName="FK_USER_ID"
+                                 referencedTableName="USERS"
                                  referencedColumnNames="ID"
                                  onDelete="CASCADE"/>
     </changeSet>
